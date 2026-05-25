@@ -21,7 +21,7 @@ class AuthController extends Controller
     }
 
     public function login(Request $request) {
-        if (!Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::guard('web')->attempt($request->only('email', 'password'))) {
             return response()->json(['message' => 'Identifiants incorrects'], 401);
         }
         $user  = User::where('email', $request->email)->first();
