@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'paths' => ['api/*'],
+    'paths' => ['api/*', 'login', 'logout', 'sanctum/csrf-cookie'],
     'allowed_methods' => ['*'],
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['https://relais-medical-frontend.vercel.app'],
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],
